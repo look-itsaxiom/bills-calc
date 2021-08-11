@@ -11,12 +11,23 @@ class App extends React.Component {
     }
   }
 
+  createBill(name, balanceDue, dueDate) {
+    name = name.replace(/\s/g, "");
+    this.setState(prevState => {
+      let newBill = Object.assign({}, prevState.bills[name]);
+      newBill.bills[name] = {
+        "balanceDue": balanceDue,
+        "dueDate": dueDate
+      }
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Chase's Bills Tool</h1>
         <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
-        {/* <BillListForm /> */}
+        <BillListForm onClick={this.createBill} />
         {/* <BillListDisplay /> */}
         {/* <BillListSchedule /> */}
       </div>
