@@ -9,17 +9,24 @@ class App extends React.Component {
       date: new Date(),
       bills: require('./BillsSource.json')
     }
+    this.createBill = this.createBill.bind(this);
   }
 
-  createBill(name, balanceDue, dueDate) {
-    name = name.replace(/\s/g, "");
-    this.setState(prevState => {
-      let newBill = Object.assign({}, prevState.bills[name]);
-      newBill.bills[name] = {
-        "balanceDue": balanceDue,
-        "dueDate": dueDate
+  createBill({name, amt, dueDate}) {
+    //move function down to form level, then pass up the finish object to add to state
+    let newBill = {};
+    newBill[name] = {
+      "balanceDue": amt,
+      "dueDate": dueDate,
+      "paid": false
+    } 
+    this.setState((prevState, props) => ({
+      date: prevState.date,
+      bills: {...prevState.bills,
+         newBill
       }
-    })
+    }));
+    console.log(this.state);
   }
 
   render() {
