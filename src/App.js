@@ -1,32 +1,25 @@
 import React from 'react';
 import './App.css';
 import BillListForm from './BillListForm';
+import BillListDisplay from './BillListDisplay';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+    let j;
     this.state = {
       date: new Date(),
-      bills: require('./BillsSource.json')
+      billsList: Object.keys(j = require('./BillsSource.json')).map(entry => ({name: entry, balanceDue: j[entry].balanceDue, dueDate: j[entry].dueDate, paid: j[entry].paid}))
     }
     this.createBill = this.createBill.bind(this);
   }
 
-  createBill({name, amt, dueDate}) {
+  createBill(bill) {
     //move function down to form level, then pass up the finish object to add to state
-    let newBill = {};
-    newBill[name] = {
-      "balanceDue": amt,
-      "dueDate": dueDate,
-      "paid": false
-    } 
-    this.setState((prevState, props) => ({
+    this.setState((prevState) => ({
       date: prevState.date,
-      bills: {...prevState.bills,
-         newBill
-      }
+      billsList: [...prevState.billsList, bill]
     }));
-    console.log(this.state);
   }
 
   render() {
@@ -35,7 +28,7 @@ class App extends React.Component {
         <h1>Chase's Bills Tool</h1>
         <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
         <BillListForm onClick={this.createBill} />
-        {/* <BillListDisplay /> */}
+        <BillListDisplay billsList={this.state.billsList} />
         {/* <BillListSchedule /> */}
       </div>
     );

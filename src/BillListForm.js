@@ -2,7 +2,7 @@ import React from 'react';
 
 function BillListForm(props) {
     let formValues = {
-
+        paid: false
     };
 
     const submit = e => {
@@ -11,11 +11,11 @@ function BillListForm(props) {
     }
     
     function handleNameChange(e) {
-        formValues.billName = e.target.value;
+        formValues.name = e.target.value;
     }
 
     function handleAmountChange(e) {
-        formValues.amt = e.target.value;
+        formValues.balanceDue = e.target.value;
     }
 
     function handleDateChange(e) {
@@ -28,7 +28,7 @@ function BillListForm(props) {
             <label>Bill Name: <input type="text" name="billName" value={props.billName} onChange={handleNameChange}></input></label>
             <label>BalanceDue: <input type="number" name="balanceDue" step="0.01" value={props.amt} onChange={handleAmountChange}></input></label>
             <label>Due Date: <input type="date" name="dueDate" value={props.dueDate} onChange={handleDateChange}></input></label>
-            <input type="submit" value="Add" ></input>
+            <input type="submit" value="Add"></input>
         </form>
     )
 }
