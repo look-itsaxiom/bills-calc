@@ -25,9 +25,9 @@ function BillListForm(props) {
     return (
         <form onSubmit={submit}>
             <h2>Enter new bill:</h2>
-            <label>Bill Name: <input type="text" name="billName" value={props.billName} onChange={handleNameChange}></input></label>
-            <label>BalanceDue: <input type="number" name="balanceDue" step="0.01" value={props.amt} onChange={handleAmountChange}></input></label>
-            <label>Due Date: <input type="date" name="dueDate" value={props.dueDate} onChange={handleDateChange}></input></label>
+            <label>Bill Name: <input required type="text" name="billName" onChange={handleNameChange}></input></label>
+            <label>BalanceDue: <input required type="number" name="balanceDue" step="0.01" onChange={handleAmountChange}></input></label>
+            <label>Due Date: <input required type="date" name="dueDate" onChange={handleDateChange}></input></label>
             <input type="submit" value="Add"></input>
         </form>
     )

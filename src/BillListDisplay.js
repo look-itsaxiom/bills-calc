@@ -3,14 +3,14 @@ import React from 'react';
 function BillListDisplay(props) {
 
     let unpaidBillList = props.billsList.filter(bill => !bill.paid).map(bill => 
-        (<tr>
+        (<tr key={bill.name}>
             <td>{bill.name}</td>
             <td>{bill.balanceDue}</td>
             <td>{bill.dueDate}</td>
         </tr>));
 
     let paidBillList = props.billsList.filter(bill => bill.paid).map(bill =>
-    (<tr>
+    (<tr key={bill.name}>
         <td>{bill.name}</td>
         <td>{bill.balanceDue}</td>
         <td>{bill.dueDate}</td>
