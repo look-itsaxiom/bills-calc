@@ -19,23 +19,31 @@ function BillListDisplay(props) {
     return (
         <>
             <table>
-                <label>Unpaid Bills</label>
-                <tr>
-                    <th>Bill Name</th>
-                    <th>Balance Due</th>
-                    <th>Bill Due Date</th>
-                </tr>
-                {unpaidBillList}
+                <caption>Unpaid Bills</caption>
+                <thead>
+                    <tr>
+                        <th>Bill Name</th>
+                        <th>Balance Due</th>
+                        <th>Bill Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {unpaidBillList}
+                </tbody>
             </table>
             
             <table>
-                <label>Paid Bills</label>
-                <tr>
-                    <th>Bill Name</th>
-                    <th>Balance Due</th>
-                    <th>Bill Due Date</th>
-                </tr>
-                {paidBillList}
+                <caption>Paid Bills</caption>
+                <thead>
+                    <tr>
+                        <th>Bill Name</th>
+                        <th>Balance Due</th>
+                        <th>Bill Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {paidBillList}
+                </tbody>
             </table>
         </>
     )
