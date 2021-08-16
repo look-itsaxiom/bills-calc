@@ -2,18 +2,18 @@ import React from 'react';
 
 function BillListDisplay(props) {
 
-    let unpaidBillList = props.billsList.filter(bill => !bill.paid).map(bill => 
+    let unpaidBillList = props.billsList.filter(bill => !bill.paid).sort((a,b) => a.dueDate - b.dueDate).map(bill => 
         (<tr key={bill.name}>
             <td>{bill.name}</td>
             <td>{bill.balanceDue}</td>
-            <td>{bill.dueDate}</td>
+        {bill.dueDate <= new Date() ? (<td style={{ "backgroundColor": "hsla(0, 100%, 38%, 0.72)"}}>{bill.dueDate.toLocaleDateString()}</td>) : (<td>{bill.dueDate.toLocaleDateString()}</td>)}
         </tr>));
 
-    let paidBillList = props.billsList.filter(bill => bill.paid).map(bill =>
+    let paidBillList = props.billsList.filter(bill => bill.paid).sort((a, b) => a.dueDate - b.dueDate).map(bill =>
     (<tr key={bill.name}>
         <td>{bill.name}</td>
         <td>{bill.balanceDue}</td>
-        <td>{bill.dueDate}</td>
+        <td>{bill.dueDate.toLocaleDateString()}</td>
     </tr>));
 
     return (

@@ -31,7 +31,7 @@ function BillListForm(props) {
     }
 
     function handleDateChange(e) {
-        formValues.dueDate = e.target.value;
+        formValues.dueDate = new Date(e.target.value);
     }
 
     return (
