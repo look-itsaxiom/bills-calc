@@ -9,7 +9,7 @@ class App extends React.Component {
     let j;
     this.state = {
       date: new Date(),
-      billsList: Object.keys(j = require('./BillsSource.json')).map(entry => ({name: entry, balanceDue: j[entry].balanceDue, dueDate: j[entry].dueDate, paid: j[entry].paid}))
+      billsList: Object.keys(j = require('./BillsSource.json')).map(entry => ({name: entry, balanceDue: j[entry].balanceDue, dueDate: new Date(j[entry].dueDate), paid: j[entry].paid}))
     }
     this.createBill = this.createBill.bind(this);
   }
