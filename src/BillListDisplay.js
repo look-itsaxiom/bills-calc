@@ -6,6 +6,34 @@ function BillListDisplay(props) {
 
     let paidBillList = props.billsList.filter(bill => bill.paid).sort((a, b) => a.dueDate - b.dueDate)
 
+    const deleteBill = function(e) {
+        let selectedBill;
+
+        if (unpaidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML).length > 0) {
+            [selectedBill] = unpaidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML);
+            props.delClick(selectedBill);
+        } else if (paidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML).length > 0) {
+            [selectedBill] = paidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML);
+            props.delClick(selectedBill);
+        } else {
+            return null;
+        }
+    }
+
+    const changeBill = function (e) {
+        let selectedBill;
+
+        if (unpaidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML).length > 0) {
+            [selectedBill] = unpaidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML);
+            props.changeClick(selectedBill);
+        } else if (paidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML).length > 0) {
+            [selectedBill] = paidBillList.filter(bill => bill.name === e.target.parentNode.parentNode.firstChild.innerHTML);
+            props.changeClick(selectedBill);
+        } else {
+            return null;
+        }
+    }
+
     return (
         <>
             <table>
@@ -23,6 +51,8 @@ function BillListDisplay(props) {
                             <td>{bill.name}</td>
                             <td>{bill.balanceDue}</td>
                             {bill.dueDate <= new Date() ? (<td style={{ "backgroundColor": "hsla(0, 100%, 38%, 0.72)" }}>{bill.dueDate.toLocaleDateString()}</td>) : (<td>{bill.dueDate.toLocaleDateString()}</td>)}
+                            <td><input type="button" value="Mark as Paid" onClick={changeBill}></input></td>
+                            <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
                         </tr>
                         )
                     )}
@@ -50,6 +80,8 @@ function BillListDisplay(props) {
                             <td>{bill.name}</td>
                             <td>{bill.balanceDue}</td>
                             <td>{bill.dueDate.toLocaleDateString()}</td>
+                            <td><input type="button" value="Mark as Unpaid" onClick={changeBill}></input></td>
+                            <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
                         </tr>
                         )
                     )}
