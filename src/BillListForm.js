@@ -2,12 +2,24 @@ import React from 'react';
 
 function BillListForm(props) {
     let formValues = {
-        paid: false
+        paid: false,
+        name: "",
+        balanceDue: 0,
+        dueDate: ""
     };
 
     const submit = e => {
         e.preventDefault();
-        props.onClick(formValues);
+        if (formValues.name !== "") {
+            props.onClick(formValues); 
+            formValues = {
+                paid: false,
+                name: "",
+                balanceDue: 0,
+                dueDate: ""
+            };
+            document.getElementById("new-bill").reset();
+        }
     }
     
     function handleNameChange(e) {
@@ -23,7 +35,7 @@ function BillListForm(props) {
     }
 
     return (
-        <form onSubmit={submit}>
+        <form onSubmit={submit} id="new-bill" autoComplete="off">
             <h2>Enter new bill:</h2>
             <label>Bill Name: <input required type="text" name="billName" onChange={handleNameChange}></input></label>
             <label>BalanceDue: <input required type="number" name="balanceDue" step="0.01" onChange={handleAmountChange}></input></label>
