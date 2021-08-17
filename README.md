@@ -52,7 +52,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+<p>I needed something simple to get started with React and noticed I was constantly trying to remember the dates of bills that needed to be paid. So I made this:</p>
 <img src="screenshot.png" alt="screenshot">
+
 
 ### Built With
 
