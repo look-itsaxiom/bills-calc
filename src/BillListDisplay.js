@@ -60,7 +60,7 @@ function BillListDisplay(props) {
                 <tfoot>
                     <tr>
                         <th>Total Owed</th>
-                        <td>{unpaidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
+                        <td>{unpaidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0)/*.toFixed(2)*/}</td>
                     </tr>
                 </tfoot>
             </table>
@@ -89,7 +89,7 @@ function BillListDisplay(props) {
                 <tfoot>
                     <tr>
                         <th>Total Paid</th>
-                        <td>{paidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
+                        <td>{paidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0)/*.toFixed(2)*/}</td>
                     </tr>
                 </tfoot>
             </table>
