@@ -104,6 +104,7 @@ Just a simple tool to keep track of bills. To import many bills at once edit thi
 
 1. Importer tool to quickly create bill lists
 2. Material UI redesign because.. well look the project right now 😂
+3. Create visual due date display in a calendar library I have yet to choose
 
 
 
