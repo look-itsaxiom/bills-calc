@@ -60,6 +60,7 @@
 
 * [React](https://reactjs.org)
 * [Full Calendar](https://fullcalendar.io/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
 
 <br />
 
