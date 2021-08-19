@@ -27,7 +27,7 @@ function BillListForm(props) {
     }
 
     function handleAmountChange(e) {
-        formValues.balanceDue = e.target.value;
+        formValues.balanceDue = parseFloat(e.target.value);
     }
 
     function handleDateChange(e) {
