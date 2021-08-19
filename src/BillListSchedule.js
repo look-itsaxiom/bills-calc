@@ -15,10 +15,6 @@ export default function BillListSchedule(props) {
         }))
     }
 
-    const handleDateClick = (arg) => {
-        alert(arg.dateStr);
-    }
-
     return (
         <FullCalendar plugins={[ dayGridPlugin ]} initialView="dayGridMonth" events={billsToEvents(props.billsList)} />
     )
