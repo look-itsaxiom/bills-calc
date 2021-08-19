@@ -1,6 +1,7 @@
 import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 
 export default function BillListSchedule(props) {
     const billsToEvents = (billsList) => {
@@ -14,7 +15,12 @@ export default function BillListSchedule(props) {
 
         }))
     }
+
+    const handleDateClick = (arg) => {
+        alert(arg.dateStr);
+    }
+
     return (
-        <FullCalendar plugins={[ dayGridPlugin ]} initialView="dayGridMonth" events={billsToEvents(props.billsList)} />
+        <FullCalendar plugins={[ dayGridPlugin, interactionPlugin ]} initialView="dayGridMonth" events={billsToEvents(props.billsList)} selectable="true" dateClick={handleDateClick}/>
     )
 }
