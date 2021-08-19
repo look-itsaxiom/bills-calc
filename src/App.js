@@ -41,7 +41,7 @@ class App extends React.Component {
         <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
         <BillListForm onClick={this.createBill} />
         <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
-        <BillListSchedule />
+        <BillListSchedule billsList={this.state.billsList} />
       </div>
     );
   }
