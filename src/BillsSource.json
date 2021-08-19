@@ -1,3 +1,7 @@
 {
-    "ExampleBill": {"balanceDue": 100, "dueDate": "8/25/21", "paid": false}
+    "ExampleBill": {
+        "balanceDue": 100,
+        "dueDate": "8/25/21",
+        "paid": false
+    }
 }

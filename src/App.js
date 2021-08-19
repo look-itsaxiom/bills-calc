@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import BillListForm from './BillListForm';
 import BillListDisplay from './BillListDisplay';
+import BillListSchedule from './BillListSchedule';
 
 class App extends React.Component {
   constructor(props) {
@@ -40,7 +41,7 @@ class App extends React.Component {
         <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
         <BillListForm onClick={this.createBill} />
         <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
-        {/* <BillListSchedule /> */}
+        <BillListSchedule billsList={this.state.billsList} />
       </div>
     );
   }

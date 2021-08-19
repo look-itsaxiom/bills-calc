@@ -59,6 +59,7 @@
 ### Built With
 
 * [React](https://reactjs.org)
+* [Full Calendar](https://fullcalendar.io/)
 
 <br />
 
@@ -102,9 +103,9 @@ Just a simple tool to keep track of bills. To import many bills at once edit thi
 <!-- ROADMAP -->
 ## Roadmap
 
-1. Importer tool to quickly create bill lists
-2. Material UI redesign because.. well look the project right now 😂
-3. Create visual due date display in a calendar library I have yet to choose
+1. Calendar Schedule display
+2. Importer tool to quickly create bill lists
+3. Bootstrap redesign because.. well look the project right now 😂
 
 
 
