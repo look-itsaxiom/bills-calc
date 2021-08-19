@@ -42,7 +42,7 @@
     "GrahamPediatrixMedBill": {
         "balanceDue": 16.61,
         "dueDate": "8/19/21",
-        "paid": false
+        "paid": true
     },
     "GrahamDentistMedBill": {
         "balanceDue": 1062.00,
@@ -62,6 +62,11 @@
     "Mortgage": {
         "balanceDue": 1885.04,
         "dueDate": "09/01/21",
+        "paid": false
+    },
+    "Gas": {
+        "balanceDue": 150,
+        "dueDate": "08/31/21",
         "paid": false
     }
 }
