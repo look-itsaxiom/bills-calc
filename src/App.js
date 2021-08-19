@@ -1,8 +1,11 @@
 import React from 'react';
-import './App.css';
+//import './App.css';
 import BillListForm from './BillListForm';
 import BillListDisplay from './BillListDisplay';
 import BillListSchedule from './BillListSchedule';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Navbar from 'react-bootstrap/Navbar';
 
 class App extends React.Component {
   constructor(props) {
@@ -36,13 +39,30 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <h1>Chase's Bills Tool</h1>
-        <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
-        <BillListForm onClick={this.createBill} />
-        <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
-        <BillListSchedule billsList={this.state.billsList} />
-      </div>
+      <>
+        <Container fluid="xl">
+          <Row>
+            <Navbar bg="dark" expand="xl" variant="dark">
+              <Container>
+                <Navbar.Brand href="#">Chase's Bill Tool</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
+          </Row>
+          <Row>
+            <BillListForm onClick={this.createBill} />
+          </Row>
+          <Row>
+            <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
+          </Row>
+          <Row>
+            <BillListSchedule billsList={this.state.billsList} />
+          </Row>
+        </Container>
+      </>
     );
   }
 }

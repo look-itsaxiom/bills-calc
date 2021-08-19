@@ -104,9 +104,9 @@ Just a simple tool to keep track of bills. To import many bills at once edit thi
 <!-- ROADMAP -->
 ## Roadmap
 
-1. Calendar Schedule display
-2. Importer tool to quickly create bill lists
-3. Bootstrap redesign because.. well look the project right now 😂
+1. [x] Calendar Schedule display
+2. [ ] Importer tool to quickly create bill lists
+3. [ ] Bootstrap redesign because.. well look the project right now 😂
 
 
 
