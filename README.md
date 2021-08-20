@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/chase-skibeness/bills-calc">
-    <img src="bill.png" alt="Logo" width="80" height="80" >
+    <img src="public/bill.png" alt="Logo" width="80" height="80" >
   </a>
 
   <h3 align="center">Bill Scheduler Tool</h3>
