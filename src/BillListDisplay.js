@@ -40,7 +40,7 @@ function BillListDisplay(props) {
     return (
         <Container fluid>
             <Col>
-                <Table striped bordered hover variant="dark">
+                <Table size="xs" striped responsive bordered hover variant="dark">
                     <caption>Unpaid Bills</caption>
                     <thead>
                         <tr>
@@ -74,7 +74,7 @@ function BillListDisplay(props) {
             </Col>
             
             <Col>
-                <Table striped bordered hover variant="dark">
+                <Table size="xs" responsive striped bordered hover variant="dark">
                     <caption>Paid Bills</caption>
                     <thead>
                         <tr>
