@@ -57,7 +57,7 @@ class App extends React.Component {
               <Container>
                 <Navbar.Brand href="#">Chase's Bill Tool</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
                   <Button variant="secondary" onClick={this.handleShow}>Add Bill</Button>
                   <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
                 </Navbar.Collapse>
@@ -74,6 +74,7 @@ class App extends React.Component {
             </Offcanvas>
           </Row>
           <Row>
+            <br />
             <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
           </Row>
           <Row>
