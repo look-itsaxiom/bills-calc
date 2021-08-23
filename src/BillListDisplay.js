@@ -57,8 +57,8 @@ function BillListDisplay(props) {
                                 <td>{bill.name}</td>
                                 <td>{bill.balanceDue}</td>
                                 {bill.dueDate <= new Date() ? (<td style={{ "backgroundColor": "hsla(0, 100%, 38%, 0.72)" }}>{bill.dueDate.toLocaleDateString()}</td>) : (<td>{bill.dueDate.toLocaleDateString()}</td>)}
-                                <td><input type="button" value="Mark as Paid" onClick={changeBill}></input></td>
-                                <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
+                                <td><input type="button" value="Paid" onClick={changeBill}></input></td>
+                                <td><input type="button" value="X" onClick={deleteBill}></input></td>
                             </tr>
                             )
                         )}
@@ -91,8 +91,8 @@ function BillListDisplay(props) {
                                 <td>{bill.name}</td>
                                 <td>{bill.balanceDue}</td>
                                 <td>{bill.dueDate.toLocaleDateString()}</td>
-                                <td><input type="button" value="Mark as Unpaid" onClick={changeBill}></input></td>
-                                <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
+                                <td><input type="button" value="Unpaid" onClick={changeBill}></input></td>
+                                <td><input type="button" value="X" onClick={deleteBill}></input></td>
                             </tr>
                             )
                         )}
