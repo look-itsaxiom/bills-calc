@@ -1,7 +1,7 @@
 {
     "Car Insurance": { "balanceDue": 211.78, "dueDate": "8/23/21", "paid": true
     },
-    "Electric": { "balanceDue": 91.81, "dueDate": "8/24/21", "paid": false
+    "Electric": { "balanceDue": 91.81, "dueDate": "8/24/21", "paid": true
     },
     "Internet": { "balanceDue": 58.51, "dueDate": "8/15/21", "paid": true
     },
@@ -9,7 +9,7 @@
     },
     "GrahamEvergreenMedBill": { "balanceDue": 33.93, "dueDate": "8/10/21", "paid": true
     },
-    "HRVBill": { "balanceDue": 211.40, "dueDate": "8/25/21", "paid": false
+    "HRVBill": { "balanceDue": 211.40, "dueDate": "8/25/21", "paid": true
     },
     "LOC": { "balanceDue": 37.82, "dueDate": "8/15/21", "paid": true
     },
@@ -21,7 +21,7 @@
     },
     "AliciaEvergreenMedBill": {"balanceDue": 140.37, "dueDate": "7/23/21", "paid": true
     },
-    "GrahamChildrensMedBill": {"balanceDue": 41.83, "dueDate": "8/25/21", "paid": false
+    "GrahamChildrensMedBill": {"balanceDue": 41.83, "dueDate": "8/25/21", "paid": true
     },
     "Gas Bill": {"balanceDue": 200.00, "dueDate": "8/31/21", "paid": false
     },
