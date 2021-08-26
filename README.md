@@ -10,8 +10,6 @@
   <p align="center">
     A simple tool for keeping track of bill amounts and their due dates.
     <br />
-    <a href="https://github.com/chase-skibeness/bills-calc"><strong>Explore the docs »</strong></a>
-    <br />
     <br />
     <a href="https://github.com/chase-skibeness/bills-calc">View Demo</a>
     ·
