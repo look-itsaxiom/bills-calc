@@ -7,3 +7,7 @@ a:hover {
   color: #2C3E50;
   text-decoration: none;
 }
+
+.nav-buttons {
+  margin: 0 1rem 0 1rem;
+}
