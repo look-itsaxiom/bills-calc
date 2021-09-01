@@ -60,10 +60,8 @@ class App extends React.Component {
       }, initialValue);
     };
 
-    const filename = 'billslist.json';
+    const filename = 'BillsSource.json';
     const jsonStr = JSON.stringify(convertArrayToObject(this.state.billsList, "name"));
-    // Add button to nav bar to export jsonStr to downloadable json file 
-    //https://stackoverflow.com/questions/33780271/export-a-json-object-to-a-text-file
 
     return (<a href={'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonStr)} download={filename}>Export Bills List</a>)
 
