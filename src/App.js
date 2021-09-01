@@ -22,6 +22,7 @@ class App extends React.Component {
     this.deleteBill = this.deleteBill.bind(this);
     this.changeBill = this.changeBill.bind(this);
     this.handleShow = this.handleShow.bind(this);
+    this.exportBillsList = this.exportBillsList.bind(this);
   }
 
   createBill(bill) {
@@ -48,6 +49,24 @@ class App extends React.Component {
     }));
   }
 
+  exportBillsList() {
+    const convertArrayToObject = (array, key) => {
+      const initialValue = {};
+      return array.reduce((obj, item) => {
+        return {
+          ...obj,
+          [item[key]]: item,
+        };
+      }, initialValue);
+    };
+
+    const filename = 'billslist.json';
+    const jsonStr = JSON.stringify(convertArrayToObject(this.state.billsList, "name"));
+    // Add button to nav bar to export jsonStr to downloadable json file 
+    //https://stackoverflow.com/questions/33780271/export-a-json-object-to-a-text-file
+
+  }
+
   render() {
     return (
       <>
@@ -59,6 +78,7 @@ class App extends React.Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
                   <Button variant="secondary" onClick={this.handleShow}>Add Bill</Button>
+                  <Button variant="primary" onClick={this.exportBillsList}>Export Bills List</Button>
                   <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
                 </Navbar.Collapse>
               </Container>
