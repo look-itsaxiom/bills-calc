@@ -65,6 +65,8 @@ class App extends React.Component {
     // Add button to nav bar to export jsonStr to downloadable json file 
     //https://stackoverflow.com/questions/33780271/export-a-json-object-to-a-text-file
 
+    return (<a href={'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonStr)} download={filename}>Export Bills List</a>)
+
   }
 
   render() {
@@ -78,7 +80,7 @@ class App extends React.Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
                   <Button variant="secondary" onClick={this.handleShow}>Add Bill</Button>
-                  <Button variant="primary" onClick={this.exportBillsList}>Export Bills List</Button>
+                  <Button variant="primary">{this.exportBillsList()}</Button>
                   <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
                 </Navbar.Collapse>
               </Container>
