@@ -77,8 +77,10 @@ class App extends React.Component {
                 <Navbar.Brand href="#">Chase's Bill Tool</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
-                  <Button variant="secondary" onClick={this.handleShow}>Add Bill</Button>
-                  <Button variant="primary">{this.exportBillsList()}</Button>
+                  <Container className="justify-content-evenly">
+                    <Button className="nav-buttons" variant="secondary" onClick={this.handleShow}>Add Bill</Button>
+                    <Button className="nav-buttons" variant="info">{this.exportBillsList()}</Button>
+                  </Container>
                   <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
                 </Navbar.Collapse>
               </Container>
