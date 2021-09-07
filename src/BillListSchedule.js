@@ -1,6 +1,7 @@
 import React from 'react';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import Container from 'react-bootstrap/Container';
 
 export default function BillListSchedule(props) {
     const billsToEvents = (billsList) => {
@@ -16,6 +17,9 @@ export default function BillListSchedule(props) {
     }
 
     return (
-        <FullCalendar plugins={[ dayGridPlugin ]} initialView="dayGridMonth" events={billsToEvents(props.billsList)} />
+        <Container fluid>
+            <FullCalendar plugins={[dayGridPlugin]} initialView="dayGridMonth" events={billsToEvents(props.billsList)} />
+        </Container>
+        
     )
 }

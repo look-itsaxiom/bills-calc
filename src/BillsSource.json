@@ -1,7 +1,164 @@
 {
-    "ExampleBill": {
+    "HRV Payment": {
+        "paid": false,
+        "name": "HRV Payment",
+        "balanceDue": 211.4,
+        "dueDate": "2021-09-25T00:00:00.000Z"
+    },
+    "Energy Bill": {
+        "paid": false,
+        "name": "Energy Bill",
         "balanceDue": 100,
-        "dueDate": "8/25/21",
-        "paid": false
+        "dueDate": "2021-09-25T00:00:00.000Z"
+    },
+    "Alicia's Counseling #1": {
+        "paid": false,
+        "name": "Alicia's Counseling #1",
+        "balanceDue": 180.21,
+        "dueDate": "2021-09-08T00:00:00.000Z"
+    },
+    "Alicia's Counseling #2": {
+        "paid": false,
+        "name": "Alicia's Counseling #2",
+        "balanceDue": 180.21,
+        "dueDate": "2021-09-22T00:00:00.000Z"
+    },
+    "Chase Counseling #1": {
+        "paid": false,
+        "name": "Chase Counseling #1",
+        "balanceDue": 50,
+        "dueDate": "2021-09-06T00:00:00.000Z"
+    },
+    "Chase Counseling #2": {
+        "paid": false,
+        "name": "Chase Counseling #2",
+        "balanceDue": 50,
+        "dueDate": "2021-09-13T00:00:00.000Z"
+    },
+    "Chase Counseling #3": {
+        "paid": false,
+        "name": "Chase Counseling #3",
+        "balanceDue": 50,
+        "dueDate": "2021-09-20T00:00:00.000Z"
+    },
+    "Chase Counseling #4": {
+        "paid": false,
+        "name": "Chase Counseling #4",
+        "balanceDue": 50,
+        "dueDate": "2021-10-01T00:00:00.000Z"
+    },
+    "Google Storage": {
+        "paid": false,
+        "name": "Google Storage",
+        "balanceDue": 1.99,
+        "dueDate": "2021-09-25T00:00:00.000Z"
+    },
+    "Disney+": {
+        "paid": false,
+        "name": "Disney+",
+        "balanceDue": 8.83,
+        "dueDate": "2021-09-21T00:00:00.000Z"
+    },
+    "Car Insurance": {
+        "paid": false,
+        "name": "Car Insurance",
+        "balanceDue": 211.78,
+        "dueDate": "2021-09-20T00:00:00.000Z"
+    },
+    "Ellie and Graham IRA": {
+        "paid": false,
+        "name": "Ellie and Graham IRA",
+        "balanceDue": 50,
+        "dueDate": "2021-09-17T00:00:00.000Z"
+    },
+    "Hulu": {
+        "paid": false,
+        "name": "Hulu",
+        "balanceDue": 13.25,
+        "dueDate": "2021-09-17T00:00:00.000Z"
+    },
+    "HBO MAX": {
+        "paid": false,
+        "name": "HBO MAX",
+        "balanceDue": 16.56,
+        "dueDate": "2021-09-15T00:00:00.000Z"
+    },
+    "Internet": {
+        "paid": false,
+        "name": "Internet",
+        "balanceDue": 58.51,
+        "dueDate": "2021-09-12T00:00:00.000Z"
+    },
+    "Water and Wastewater": {
+        "paid": false,
+        "name": "Water and Wastewater",
+        "balanceDue": 180,
+        "dueDate": "2021-09-12T00:00:00.000Z"
+    },
+    "Pilot Payment": {
+        "paid": false,
+        "name": "Pilot Payment",
+        "balanceDue": 462.42,
+        "dueDate": "2021-09-04T00:00:00.000Z"
+    },
+    "Google Fi": {
+        "paid": false,
+        "name": "Google Fi",
+        "balanceDue": 119.52,
+        "dueDate": "2021-09-04T00:00:00.000Z"
+    },
+    "Spotify": {
+        "paid": false,
+        "name": "Spotify",
+        "balanceDue": 14.16,
+        "dueDate": "2021-09-03T00:00:00.000Z"
+    },
+    "Mortgage": {
+        "paid": false,
+        "name": "Mortgage",
+        "balanceDue": 1885.82,
+        "dueDate": "2021-10-01T00:00:00.000Z"
+    },
+    "Capital One (Gas)": {
+        "paid": false,
+        "name": "Capital One (Gas)",
+        "balanceDue": 200,
+        "dueDate": "2021-10-01T00:00:00.000Z"
+    },
+    "BECU LOC": {
+        "paid": false,
+        "name": "BECU LOC",
+        "balanceDue": 25,
+        "dueDate": "2021-09-16T00:00:00.000Z"
+    },
+    "Ellie's Tuition": {
+        "paid": false,
+        "name": "Ellie's Tuition",
+        "balanceDue": 261.16,
+        "dueDate": "2021-10-01T00:00:00.000Z"
+    },
+    "Waste Management": {
+        "paid": false,
+        "name": "Waste Management",
+        "balanceDue": 147.27,
+        "dueDate": "2021-10-16T00:00:00.000Z"
+    },
+    "Graham's Medical Bill": {
+        "paid": false,
+        "name": "Graham's Medical Bill",
+        "balanceDue": 33.93,
+        "dueDate": "2021-09-11T00:00:00.000Z"
+    },
+    "Fundrise Payment": {
+        "paid": false,
+        "name": "Fundrise Payment",
+        "balanceDue": 50,
+        "dueDate": "2021-09-16T00:00:00.000Z"
+    },
+    "Alicia's Clothing Stipend": {
+        "paid": false,
+        "name": "Alicia's Clothing Stipend",
+        "balanceDue": 100,
+        "dueDaet": "2021-10-01T00:00:00.000Z"
     }
 }

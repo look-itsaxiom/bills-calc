@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/chase-skibeness/bills-calc">
-    <img src="bill.png" alt="Logo" width="80" height="80" >
+    <img src="public/bill.png" alt="Logo" width="80" height="80" >
   </a>
 
   <h3 align="center">Bill Scheduler Tool</h3>
@@ -58,6 +58,7 @@
 
 * [React](https://reactjs.org)
 * [Full Calendar](https://fullcalendar.io/)
+* [React Bootstrap](https://react-bootstrap.github.io/)
 
 <br />
 
@@ -101,9 +102,9 @@ Just a simple tool to keep track of bills. To import many bills at once edit thi
 <!-- ROADMAP -->
 ## Roadmap
 
-1. Calendar Schedule display
-2. Importer tool to quickly create bill lists
-3. Bootstrap redesign because.. well look the project right now 😂
+1. [x] Calendar Schedule display
+2. [ ] Importer tool to quickly create bill lists
+3. [ ] Bootstrap redesign because.. well look the project right now 😂
 
 
 

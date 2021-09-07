@@ -3,6 +3,11 @@ import './App.css';
 import BillListForm from './BillListForm';
 import BillListDisplay from './BillListDisplay';
 import BillListSchedule from './BillListSchedule';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Navbar from 'react-bootstrap/Navbar';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Button from 'react-bootstrap/Button';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,11 +15,14 @@ class App extends React.Component {
     let j;
     this.state = {
       date: new Date(),
+      show: false,
       billsList: Object.keys(j = require('./BillsSource.json')).map(entry => ({name: entry, balanceDue: j[entry].balanceDue, dueDate: new Date(j[entry].dueDate), paid: j[entry].paid}))
     }
     this.createBill = this.createBill.bind(this);
     this.deleteBill = this.deleteBill.bind(this);
     this.changeBill = this.changeBill.bind(this);
+    this.handleShow = this.handleShow.bind(this);
+    this.exportBillsList = this.exportBillsList.bind(this);
   }
 
   createBill(bill) {
@@ -34,15 +42,68 @@ class App extends React.Component {
     this.createBill(bill);
   }
 
+  handleShow() {
+    this.setState((prevState) => ({
+      ...prevState,
+      show: !prevState.show
+    }));
+  }
+
+  exportBillsList() {
+    const convertArrayToObject = (array, key) => {
+      const initialValue = {};
+      return array.reduce((obj, item) => {
+        return {
+          ...obj,
+          [item[key]]: item,
+        };
+      }, initialValue);
+    };
+
+    const filename = 'BillsSource.json';
+    const jsonStr = JSON.stringify(convertArrayToObject(this.state.billsList, "name"));
+
+    return (<a href={'data:text/plain;charset=utf-8,' + encodeURIComponent(jsonStr)} download={filename}>Export Bills List</a>)
+
+  }
+
   render() {
     return (
-      <div className="App">
-        <h1>Chase's Bills Tool</h1>
-        <h1>Today's Date is: {this.state.date.toLocaleDateString()}</h1>
-        <BillListForm onClick={this.createBill} />
-        <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
-        <BillListSchedule billsList={this.state.billsList} />
-      </div>
+      <>
+        <Container fluid="xl">
+          <Row>
+            <Navbar bg="dark" expand="xl" variant="dark">
+              <Container>
+                <Navbar.Brand href="#">Chase's Bill Tool</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-between">
+                  <Container className="justify-content-evenly">
+                    <Button className="nav-buttons" variant="secondary" onClick={this.handleShow}>Add Bill</Button>
+                    <Button className="nav-buttons" variant="info">{this.exportBillsList()}</Button>
+                  </Container>
+                  <Navbar.Text>Today is: {this.state.date.toLocaleDateString()}</Navbar.Text>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
+            {/*Migrate Offcanvas into BillList Form Component that takes state as prop to show or hide */}
+            <Offcanvas show={this.state.show} onHide={this.handleShow} backdrop={false} placement="bottom" scroll="true">
+              <Offcanvas.Header closeButton>
+                <Offcanvas.Title>Add Bill</Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+                <BillListForm onClick={this.createBill} />
+              </Offcanvas.Body>
+            </Offcanvas>
+          </Row>
+          <Row>
+            <br />
+            <BillListDisplay billsList={this.state.billsList} delClick={this.deleteBill} changeClick={this.changeBill} />
+          </Row>
+          <Row>
+            <BillListSchedule billsList={this.state.billsList} />
+          </Row>
+        </Container>
+      </>
     );
   }
 }

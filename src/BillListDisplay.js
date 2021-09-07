@@ -1,4 +1,8 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Table from 'react-bootstrap/Table';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 
 function BillListDisplay(props) {
 
@@ -35,65 +39,74 @@ function BillListDisplay(props) {
     }
 
     return (
-        <>
-            <table>
-                <caption>Unpaid Bills</caption>
-                <thead>
-                    <tr>
-                        <th>Bill Name</th>
-                        <th>Balance Due</th>
-                        <th>Bill Due Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {unpaidBillList.map(bill => ( 
-                        <tr key={bill.name}>
-                            <td>{bill.name}</td>
-                            <td>{bill.balanceDue}</td>
-                            {bill.dueDate <= new Date() ? (<td style={{ "backgroundColor": "hsla(0, 100%, 38%, 0.72)" }}>{bill.dueDate.toLocaleDateString()}</td>) : (<td>{bill.dueDate.toLocaleDateString()}</td>)}
-                            <td><input type="button" value="Mark as Paid" onClick={changeBill}></input></td>
-                            <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
-                        </tr>
-                        )
-                    )}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total Owed</th>
-                        <td>{unpaidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
-                    </tr>
-                </tfoot>
-            </table>
+        <Container fluid>
+            <Tabs defaultActiveKey="unpaidBills" >
+                <Tab eventKey="unpaidBills" title="Unpaid Bills">
+                    <Table size="xs" striped responsive bordered hover variant="dark">
+                        <thead>
+                            <tr>
+                                <th>Bill Name</th>
+                                <th>Balance Due</th>
+                                <th>Bill Due Date</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {unpaidBillList.map(bill => ( 
+                                <tr key={bill.name}>
+                                    <td>{bill.name}</td>
+                                    <td>${bill.balanceDue}</td>
+                                    {bill.dueDate <= new Date() ? (<td style={{ "backgroundColor": "hsla(0, 100%, 38%, 0.72)" }}>{bill.dueDate.toLocaleDateString()}</td>) : (<td>{bill.dueDate.toLocaleDateString()}</td>)}
+                                    <td><input type="button" value="Paid" onClick={changeBill}></input></td>
+                                    <td><input type="button" value="X" onClick={deleteBill}></input></td>
+                                </tr>
+                                )
+                            )}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total Owed</th>
+                                <td colSpan="4">${unpaidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
+
+                            </tr>
+                        </tfoot>
+                    </Table>
+                </Tab>
             
-            <table>
-                <caption>Paid Bills</caption>
-                <thead>
-                    <tr>
-                        <th>Bill Name</th>
-                        <th>Balance Due</th>
-                        <th>Bill Due Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {paidBillList.map(bill => (
-                        <tr key={bill.name}>
-                            <td>{bill.name}</td>
-                            <td>{bill.balanceDue}</td>
-                            <td>{bill.dueDate.toLocaleDateString()}</td>
-                            <td><input type="button" value="Mark as Unpaid" onClick={changeBill}></input></td>
-                            <td><input type="button" value="Delete" onClick={deleteBill}></input></td>
-                        </tr>
-                        )
-                    )}
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>Total Paid</th>
-                        <td>{paidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </>
+                <Tab eventKey="paidBills" title="Paid Bills">
+                    <Table size="xs" responsive striped bordered hover variant="dark">
+                        <thead>
+                            <tr>
+                                <th>Bill Name</th>
+                                <th>Balance Due</th>
+                                <th>Bill Due Date</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {paidBillList.map(bill => (
+                                <tr key={bill.name}>
+                                    <td>{bill.name}</td>
+                                    <td>${bill.balanceDue}</td>
+                                    <td>{bill.dueDate.toLocaleDateString()}</td>
+                                    <td><input type="button" value="Unpaid" onClick={changeBill}></input></td>
+                                    <td><input type="button" value="X" onClick={deleteBill}></input></td>
+                                </tr>
+                                )
+                            )}
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Total Paid</th>
+                                <td colSpan="4">${paidBillList.reduce((acc, curr) => acc + curr.balanceDue, 0).toFixed(2)}</td>
+                            </tr>
+                        </tfoot>
+                    </Table>
+                </Tab>
+            </Tabs>
+        </Container>
     )
 }
 
