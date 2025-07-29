@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/chase-skibeness/bills-calc">
+  <a href="https://github.com/Axiom-Axiom/bills-calc">
     <img src="public/bill.png" alt="Logo" width="80" height="80" >
   </a>
 
@@ -11,11 +11,11 @@
     A simple tool for keeping track of bill amounts and their due dates.
     <br />
     <br />
-    <a href="https://github.com/chase-skibeness/bills-calc">View Demo</a>
+    <a href="https://github.com/Axiom-Axiom/bills-calc">View Demo</a>
     ·
-    <a href="https://github.com/chase-skibeness/bills-calc/issues">Report Bug</a>
+    <a href="https://github.com/Axiom-Axiom/bills-calc/issues">Report Bug</a>
     ·
-    <a href="https://github.com/chase-skibeness/bills-calc/issues">Request Feature</a>
+    <a href="https://github.com/Axiom-Axiom/bills-calc/issues">Request Feature</a>
   </p>
 </p>
 
@@ -80,7 +80,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/chase-skibeness/bills-calc.git
+   git clone https://github.com/Axiom-Axiom/bills-calc.git
    ```
 2. Install NPM packages
    ```sh
@@ -126,9 +126,9 @@ Contributions are what make the open source community such an amazing place to b
 <!-- CONTACT -->
 ## Contact
 
-Chase Skibeness - chaseskibbs@gmail.com
+Chase Skibeness - Axiomskibbs@gmail.com
 
-Project Link: [https://github.com/chase-skibeness/bills-calc](https://github.com/chase-skibeness/bills-calc)
+Project Link: [https://github.com/Axiom-Axiom/bills-calc](https://github.com/Axiom-Axiom/bills-calc)
 
 
 
@@ -138,14 +138,14 @@ Project Link: [https://github.com/chase-skibeness/bills-calc](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/chase-skibeness/repo.svg?style=for-the-badge
-[contributors-url]: https://github.com/chase-skibeness/bills-calc/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/chase-skibeness/repo.svg?style=for-the-badge
-[forks-url]: https://github.com/chase-skibeness/bills-calc/network/members
-[stars-shield]: https://img.shields.io/github/stars/chase-skibeness/repo.svg?style=for-the-badge
-[stars-url]: https://github.com/chase-skibeness/bills-calc/stargazers
-[issues-shield]: https://img.shields.io/github/issues/chase-skibeness/repo.svg?style=for-the-badge
-[issues-url]: https://github.com/chase-skibeness/bills-calc/issues
-[license-shield]: https://img.shields.io/github/license/chase-skibeness/repo.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Axiom-Axiom/repo.svg?style=for-the-badge
+[contributors-url]: https://github.com/Axiom-Axiom/bills-calc/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Axiom-Axiom/repo.svg?style=for-the-badge
+[forks-url]: https://github.com/Axiom-Axiom/bills-calc/network/members
+[stars-shield]: https://img.shields.io/github/stars/Axiom-Axiom/repo.svg?style=for-the-badge
+[stars-url]: https://github.com/Axiom-Axiom/bills-calc/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Axiom-Axiom/repo.svg?style=for-the-badge
+[issues-url]: https://github.com/Axiom-Axiom/bills-calc/issues
+[license-shield]: https://img.shields.io/github/license/Axiom-Axiom/repo.svg?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/chase-skibeness
+[linkedin-url]: https://linkedin.com/in/Axiom-Axiom
